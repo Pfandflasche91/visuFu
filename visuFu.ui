@@ -17,7 +17,7 @@
    <item>
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QListWidget" name="listWidget"/>
+      <widget class="QTextBrowser" name="textBrowser"/>
      </item>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
