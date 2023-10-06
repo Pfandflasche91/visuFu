@@ -8,5 +8,6 @@ app = QtWidgets.QApplication(sys.argv)
 window = MainWindow()
 window.show()
 
+app.aboutToQuit.connect(window.quit_application)
 app.exec()
 
