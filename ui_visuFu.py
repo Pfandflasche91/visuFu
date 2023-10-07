@@ -19,11 +19,13 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QHBoxLayout, QLineEdit,
     QPushButton, QSizePolicy, QTextBrowser, QVBoxLayout,
     QWidget)
 
+from pyqtgraph import PlotWidget
+
 class Ui_MainWidget(object):
     def setupUi(self, MainWidget):
         if not MainWidget.objectName():
             MainWidget.setObjectName(u"MainWidget")
-        MainWidget.resize(1134, 715)
+        MainWidget.resize(869, 406)
         self.verticalLayout = QVBoxLayout(MainWidget)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout_2 = QVBoxLayout()
@@ -48,10 +50,20 @@ class Ui_MainWidget(object):
 
         self.verticalLayout_2.addLayout(self.horizontalLayout_2)
 
+        self.horizontalLayout_3 = QHBoxLayout()
+        self.horizontalLayout_3.setObjectName(u"horizontalLayout_3")
+        self.graphicsView = PlotWidget(MainWidget)
+        self.graphicsView.setObjectName(u"graphicsView")
+
+        self.horizontalLayout_3.addWidget(self.graphicsView)
+
         self.textBrowser = QTextBrowser(MainWidget)
         self.textBrowser.setObjectName(u"textBrowser")
 
-        self.verticalLayout_2.addWidget(self.textBrowser)
+        self.horizontalLayout_3.addWidget(self.textBrowser)
+
+
+        self.verticalLayout_2.addLayout(self.horizontalLayout_3)
 
         self.horizontalLayout = QHBoxLayout()
         self.horizontalLayout.setObjectName(u"horizontalLayout")
